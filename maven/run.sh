@@ -10,7 +10,7 @@ if [ ! -z  $GIT_REPO ]
  then
     git clone $GIT_REPO
  else
-	echo "INFO: Git repo no defined."
+	echo "INFO: Git repo not defined."
 fi
 
 
