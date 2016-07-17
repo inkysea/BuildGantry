@@ -29,4 +29,6 @@ if [ ! -z $SETTINGS_XML_FILE ]
 fi
 
 cd $PROJECT_DIR
+
+echo "INFO: Executing mvn $MVN_OPTS"
 mvn $MVN_OPTS
