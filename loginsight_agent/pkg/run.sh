@@ -16,8 +16,9 @@ else
 	exit 1
 fi
 
-if [ -e $LI_HOST ]
+if [ ! -z $LI_HOST ]
 then
+    echo "INFO: Setting Log Insight host: $LI_HOST"
     sed -i "/;hostname=LOGINSIGHT/c\hostname=$LI_HOST" /var/lib/loginsight-agent/liagent.ini
 fi
 
