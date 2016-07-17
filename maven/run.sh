@@ -6,10 +6,10 @@ JAVA_HOME=/var/opt/OpenJDK-1.8.0.92-bin/
 
 cd $BUILD_DIR
 
-if [ -e $GIT_REPO ]
-then
+if [ ! -z  $GIT_REPO ]
+ then
     git clone $GIT_REPO
-else
+ else
 	echo "INFO: Git repo no defined."
 fi
 
