@@ -16,11 +16,15 @@ fi
 
 mkdir ~/.m2
 
-if $SETTINGS_XML_REPO != null; then
+if [ ! -z $SETTINGS_XML_REPO ]
+ then
+    echo "INFO: Applying settings.xml"
     curl $SETTINGS_XML_REPO
 fi
 
-if $SETTINGS_XML_FILE != null; then
+if [ ! -z $SETTINGS_XML_FILE ]
+ then
+    echo "INFO: Applying settings.xml"
     cp $SETTINGS_XML_FILE ~.m2/settings.xml
 fi
 
