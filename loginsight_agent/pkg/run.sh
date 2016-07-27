@@ -18,7 +18,7 @@ fi
 
 if [ -e $TAG_REPLACE ]
 then
-    sed "s/tags=.*/tags=${TAG_REPLACE}" /var/lib/loginsight-agent/liagent.ini
+    sed "s/tags=.*/tags=$TAG_REPLACE" /var/lib/loginsight-agent/liagent.ini
 fi
 
 
