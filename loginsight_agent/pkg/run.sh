@@ -27,6 +27,10 @@ then
     sed -i "/;hostname=LOGINSIGHT/c\hostname=$LI_HOST" /var/lib/loginsight-agent/liagent.ini
 fi
 
+if [ ! -z $MK_DIR ]
+then
+    grep directory=$LI_INI_FILE | cut -d '=' -f 2 | xargs mkdir -p
+fi
 
 /etc/rc.d/init.d/liagentd restart
 
