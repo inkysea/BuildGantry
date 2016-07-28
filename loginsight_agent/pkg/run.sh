@@ -30,6 +30,10 @@ fi
 
 /etc/rc.d/init.d/liagentd restart
 
+sleep 5
+
+/etc/rc.d/init.d/liagentd restart
+
 tail -f /dev/null
 
 
