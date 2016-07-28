@@ -16,11 +16,10 @@ else
 	exit 1
 fi
 
-if [ -e $TAG_REPLACE ]
+if [[ ! -z $TAG_REPLACE ]]
 then
-    sed "s/tags=.*/tags=$TAG_REPLACE" /var/lib/loginsight-agent/liagent.ini
+    sed -i "s/tags=.*/tags=$TAG_REPLACE/" /var/lib/loginsight-agent/liagent.ini
 fi
-
 
 if [ ! -z $LI_HOST ]
 then
